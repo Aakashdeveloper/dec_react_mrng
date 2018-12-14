@@ -1,0 +1,20 @@
+{
+  "name": "dummyapp",
+  "version": "1.0.0",
+  "description": "this is dummy app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "node"
+  ],
+  "author": "nareshit",
+  "license": "ISC",
+  "dependencies": {
+    "react": "~16.6.3",
+    "react-dom": "^16.6.3",
+    "express":"^18.4.5"
+  }
+}

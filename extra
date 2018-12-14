@@ -1,0 +1,19 @@
+packages
+npmjs(node package manager)
+
+React ==> NodeJS
+
+package.json
+
+javascript object notation
+
+
+
+
+npm init
+npm install --save React
+
+npm install -g create-react-app
+
+create-react-app firstapp
+npm start
