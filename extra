@@ -17,3 +17,37 @@ npm install -g create-react-app
 
 create-react-app firstapp
 npm start
+
+
+
+/*
+
+class based
+bit heavy as compare to functional
+more functionlaity
+statefull component
+
+functional component
+light weight
+less functionlaity
+state less component
+
+
+
+state
+props
+
+
+
+A            ======>              B 
+state1        props             state 2
+
+
+
+function add(a,b){
+    return a+b
+}
+
+const add = (a,b) => { return a+b }
+
+*/
