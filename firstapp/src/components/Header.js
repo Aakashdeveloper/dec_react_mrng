@@ -13,6 +13,8 @@ class Header extends Component{
 
     inputChanges = (event) => {
         console.log(event.target.value)
+        this.setState({keywords:event.target.value })
+
     }
 
     render(){
@@ -24,7 +26,7 @@ class Header extends Component{
                 </div>
                 <center>
                     <input type="text"
-                    onChange={this.inputChanges}/>
+                    onChange={this.inputChanges.bind(this)}/>
                     <p>{this.state.keywords}</p>
                 </center>
             </header>
