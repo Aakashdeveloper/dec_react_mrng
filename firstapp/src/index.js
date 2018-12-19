@@ -11,14 +11,25 @@ class App extends Component {
         super(props)
 
         this.state = {
-            news:JSON
+            news:JSON,
+            filtered: JSON
         }
     }
+    
+    filterNews(keyword){
+        console.log("reciving in index", keyword)
+        let result = this.state.news.filter((item) => {
+            return item.title.toLowerCase().indexOf(keyword.toLowerCase()) > -1;
+        })
+
+        this.setState({filtered: result})
+    }
+
     render(){
         return(
             <div>
-                <Header/>
-                <NewsList sendNews={this.state.news}/>
+                <Header searchKeyword={(data) => {this.filterNews(data)}}/>
+                <NewsList sendNews={this.state.filtered}/>
             
             </div>
             
@@ -43,5 +54,12 @@ const App = () => {
         </div>
         
     )
+}
+
+function add(){
+    var a =10
+}
+if(){
+    let a =10
 }
 */

@@ -17,7 +17,7 @@ const NewsList = (props) => {
 
 
     return(
-       <div>
+       <div className="container">
            {results}
         </div>
     )
