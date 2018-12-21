@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Link} from 'react-router-dom'
 //Comppnents
 import Posts from './components/post';
 import Profile from './components/profile';
+import PostsDeatil from './components/postDetail';
 
 class App extends Component{
     render(){
@@ -48,7 +49,8 @@ ReactDOM.render(
                 </header>
                 <div className="container">
                     <Route exact path="/" component={App}></Route>
-                    <Route path="/posts" component={Posts}></Route>
+                    <Route exact path="/posts" component={Posts}></Route>
+                    <Route path="/posts/:id" component={PostsDeatil}></Route>
                     <Route path="/profile" component={Profile}> </Route>
                 </div>
                 
