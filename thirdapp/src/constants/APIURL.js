@@ -1,0 +1,1 @@
+export const Api_Link = "http://localhost:8900/artists";
