@@ -41,7 +41,7 @@ class Artist extends Component {
                             {this.state.artist.bio}
                         </div>
                     </div>
-                    <AlbumList></AlbumList>
+                    <AlbumList albumList={this.state.artist.albums}></AlbumList>
                 </div>
             </div>
         )
