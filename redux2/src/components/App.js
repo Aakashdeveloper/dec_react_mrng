@@ -3,10 +3,12 @@ import { BrowserRouter,Route} from 'react-router-dom';
 
 // container
 import Home from '../containers/Home'
+import NewsPage from '../containers/NewsPage';
 
 // component
 import Header from './Header';
 import Footer from './Footer'
+
 
 
 class App extends Component {
@@ -15,7 +17,10 @@ class App extends Component {
       <BrowserRouter>
         <div>
           <Header/>
+
             <Route exact path="/" component={Home}/>
+            <Route exact path="/news/:id" component = {NewsPage}/>
+            <br/>
           <Footer/>
         </div>
       </BrowserRouter>
