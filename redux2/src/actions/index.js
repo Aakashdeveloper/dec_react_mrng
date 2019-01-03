@@ -57,3 +57,40 @@ export function clearSelctedNews(){
         payload:[]
     }
 }
+//////////////////
+
+export function selectedGallery(id){
+    const output = fetch(`${baseUrl}/galleries?id=${id}`,{
+        method:'GET'
+    })
+    .then(response => response.json())
+
+    return{
+        type:'GET_SELECTED_GALLERY',
+        payload:output
+    }
+}
+
+export function clearSelctedGallery(){
+    return{
+        type:'CLEAR_SELECTED_GALLERY',
+        payload:[]
+    }
+}
+
+///////////////
+export function handleLikes(array,id, section,type){
+    const request = fetch(`${baseUrl}/${section}/${id}`,{
+        method:'PATCH',
+        headers:{
+            'Accept':'application/json',
+            'Content-Type':'application/json'
+        },
+        body: JSON.stringify({likes:array})
+    })
+    .then(response => response.json())
+    return{
+        type:type,
+        payload:request
+    }
+}
